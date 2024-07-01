@@ -1,0 +1,59 @@
+ /*Below "*" selects everything on page*/
+ * {
+    /*Change all fonts unless otherwise specified*/
+    font-family: monospace;
+
+    /*Inheritance used in 'select all' applies below border to every element on page
+    border: black 3px solid;*/
+ }
+
+ /*Many styles can be used in the html or body element
+ html{
+    font-size: 22px;
+ }*/
+
+body{
+    font-size: 22px;
+    
+    /*As seen with font-size only certain styles inherit in body element mostly fonts and headings
+    Due to no inheritance border below will only apply to body element and not every element like the 'select all' does
+    border: solid 3px;*/
+}
+
+/* Form elements do not typically inherit styles and require to be specifically instructed to inherit styles*/
+button, textarea, input, select{
+    font: inherit;
+}
+
+/*Comma used to select both. No comma selects h2 nested inside h1*/
+h1, h2{
+    color:blue;
+}
+
+/* gray "class" takes precenence even though paragraph selectors after it*/
+.gray{
+    color: gray;
+}
+p {
+    color: purple;
+}
+
+/* Red takes precedence due to specificity as last element read by browser*/
+/* However, "gray class" paragraphs have more specificity and is uneffected*/
+p { 
+    color: red;
+}
+
+/* p span{
+    text-transform: uppercase;
+    background-color: gold; 
+Better to use class selector that 'p span' to make code more useable*/
+.highlight{
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+/* id selector "second" used for second paragraph*/
+#second{
+    font-style: italic;
+}
