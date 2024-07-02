@@ -30,7 +30,7 @@ h1, h2{
     color:blue;
 }
 
-/* gray "class" takes precenence even though paragraph selectors after it*/
+/* gray "class" takes precenence even though paragraph selectors after it in code flow*/
 .gray{
     color: gray;
 }
@@ -54,6 +54,7 @@ Better to use class selector that 'p span' to make code more useable*/
 }
 
 /* id selector "second" used for second paragraph*/
+/* id selectors regarded as bad coding for css and only used if necessary*/
 #second{
     font-style: italic;
 }

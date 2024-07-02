@@ -1,0 +1,22 @@
+/* Basic reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgb(255, 239, 213);
+    /* Alternatively color: rgb(0,255,0)*/
+    color: darkblue;
+
+}
+
+/*rgba allows a fourth value for transparency*/
+/*hsl (hue, saturation and lightness) allows more color settings by clicking square next to color*/
+p{
+    color: rgba(0,0,0,0.7);
+}

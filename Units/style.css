@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Pixels(px) is an absolute value and will change values even if user overrides. This is unsuitable for things like font-size, however suitable for things like border.*/
+
+/* By setting min-height value to 100vh(viewport height) we ensure our 'body' element fills the entire page irrespective of how much content it contains.*/
+body{
+    /* We do not want to set the width using vw(viewport width) as this does not anticipate the scrollbar and forces a horizontal scrollbar which is undesirable. Width is best left to default or set using a percentage value.*/
+    width: 100%;
+}
+
+
+header{
+    width: 50%;
+    
+}
+/*Percentage values good for block level elements and are relative to their parent as shown with header and h1. If we set h1 to 50% it only uses 25% of page.*/
+h1{
+    border: dashed red 2px;
+    width: 50%;
+    font-size: 2rem;
+/* 'em's are useful for settings such as padding as it is relative to the parent in this case the h1.*/
+    padding : 0.5em;
+}
+
+
+main{
+    font-size: 1rem;
+}
+
+/* For values like font-size use 'rem' which is a relative root value. Default root size is set by browser so not good practise to put font-size in html selector as will override any changes user may make to browser window.*/
+
+/*'em' is relative to any rem setting any will change according to parent as above 'main' which has doubled paragraph (p) size below, so care is required using 'em's for certain values.*/
+p{
+    font-size: 2em;
+/* Using the 'ch' value we can determine the amount of  characters in each row. This is based on the browsers definition of the width of a character '0'.*/
+    width: 25ch;
+}
